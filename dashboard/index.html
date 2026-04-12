@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Індекс стабільності територій</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <h1>Індекс стабільності територій</h1>
+      <p class="page-subtitle">
+        Пілотна аналітична MVP-модель оцінки територіальних громад
+      </p>
+    </header>
+
+    <section class="card controls-card">
+      <div class="control-group">
+        <label for="community-select">Оберіть громаду</label>
+        <select id="community-select">
+          <option value="">-- Оберіть громаду --</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="grid-two">
+      <section class="card">
+        <div class="card-header">
+          <h2>Рейтинг громад</h2>
+          <span class="muted">Сортування за загальним індексом</span>
+        </div>
+
+        <table id="table">
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Громада</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2>Профіль громади</h2>
+          <span class="muted">Детальна картка вибраної громади</span>
+        </div>
+        <div id="profile" class="profile-empty">Оберіть громаду</div>
+      </section>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <h2>Карта громад</h2>
+        <span class="muted">Підсвітка громади після вибору</span>
+      </div>
+      <div id="map"></div>
+    </section>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

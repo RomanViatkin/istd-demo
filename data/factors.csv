@@ -1,0 +1,31 @@
+factor_id,factor_code,factor_name,block,subblock,unit,selected,expert_mean,threshold,weight_inside_block,source_note
+1,SP001,Regulation of land relations during wartime,spatial,land_regulation,score,1,6.4,6,0.125,doc_research
+2,SP002,Share of community area in regional area,spatial,territory_structure,percent,1,6.0,6,0.125,doc_research
+3,SP003,Simplification of land use purpose change for reconstruction,spatial,land_use_change,score,1,6.6,6,0.125,doc_research
+4,SP004,Collection and protection of land information in aggressive conditions,spatial,land_data,score,1,6.0,6,0.125,doc_research
+5,SP005,Conditions for attracting funds for real estate construction,spatial,investment_conditions,score,1,6.2,6,0.125,doc_research
+6,SP006,Implementation of software and GIS support in communities,spatial,gis_enablement,score,1,6.4,6,0.125,doc_research
+7,SP007,Boundary support and cartographic material accounting,spatial,boundaries_mapping,score,1,6.2,6,0.125,doc_research
+8,SP008,Sustainable non-agricultural land-use organization,spatial,land_use_constraints,score,1,6.2,6,0.125,doc_research
+
+9,DV001,Implementation of functional directions of land relations,development,governance,score,1,6.4,6,0.10,doc_shi3
+10,DV002,Functioning of communities during martial law,development,wartime_governance,score,1,6.2,6,0.10,doc_shi3
+11,DV003,Stakeholder interaction during martial law,development,stakeholder_coordination,score,1,6.8,6,0.10,doc_shi3
+12,DV004,Index of change in cooperation projects,development,cooperation_projects,index,1,6.0,6,0.10,doc_shi3
+13,DV005,Level of administrative services via ASC,development,admin_services,index,1,6.2,6,0.10,doc_shi3
+14,DV006,Index of change in local budget revenues per capita,development,budget_capacity,index,1,7.0,6,0.10,doc_shi3
+15,DV007,Index of spending on local self-government bodies,development,governance_spending,index,1,6.2,6,0.10,doc_shi3
+16,DV008,Index of number of international partners,development,partnerships,index,1,6.6,6,0.10,doc_shi3
+17,DV009,Support of integrated development of communities,development,integrated_development,score,1,6.2,6,0.10,doc_shi3
+18,DV010,Development and implementation of complex recovery programs,development,recovery_programs,score,1,7.2,6,0.10,doc_shi3
+
+19,SC001,Information support of recovery,security,information_support,score,1,6.6,6,0.10,doc_shi4
+20,SC002,Possibility of AI application in recovery,security,ai_application,score,1,6.2,6,0.10,doc_shi4
+21,SC003,Use of GIS in community functioning,security,gis_application,score,1,7.0,6,0.10,doc_shi4
+22,SC004,Availability of personnel applying AI,security,ai_human_capacity,score,1,7.0,6,0.10,doc_shi4
+23,SC005,Stimulation of AI research,security,ai_research,score,1,6.2,6,0.10,doc_shi4
+24,SC006,Scientific events in AI field,security,ai_events,score,1,6.8,6,0.10,doc_shi4
+25,SC007,Development of national geospatial data infrastructure,security,nsdi,score,1,7.6,6,0.10,doc_shi4
+26,SC008,Formation and use of geospatial data,security,geodata_use,score,1,6.6,6,0.10,doc_shi4
+27,SC009,Monitoring of NSDI functioning and development,security,nsdi_monitoring,score,1,7.2,6,0.10,doc_shi4
+28,SC010,Analysis and visualization of geospatial data for decisions,security,decision_support,score,1,6.4,6,0.10,doc_shi4
