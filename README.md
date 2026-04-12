@@ -9,7 +9,7 @@ This repository contains a pilot analytical MVP for assessing territorial stabil
 ## Project structure
 
 ```text
-territorial-stability-index/
+territorial-stability-mvp/
 ├── data/
 ├── src/
 ├── results/
