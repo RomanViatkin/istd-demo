@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Territorial Stability Index — Pilot MVP
 
 This repository contains a pilot analytical MVP for assessing territorial stability of communities based on three groups of factors:
