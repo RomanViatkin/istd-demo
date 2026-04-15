@@ -4,64 +4,142 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Індекс стабільності територій</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta
+    name="description"
+    content="Пілотна аналітична модель оцінки територіальних громад"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
   />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
+  <div class="page-shell">
     <header class="page-header">
+      <div class="page-eyebrow">Пілотна аналітична модель</div>
       <h1>Індекс стабільності територій</h1>
       <p class="page-subtitle">
-        Пілотна аналітична MVP-модель оцінки територіальних громад
+        Оцінка територіальних громад за просторовими, безпековими та
+        розвитковими показниками.
       </p>
     </header>
 
-    <section class="card controls-card">
+    <section class="card controls-card" aria-label="Панель вибору громади">
+      <div class="controls-intro">
+        <h2>Вибір громади</h2>
+        <p>
+          Оберіть громаду зі списку або натисніть на рядок у таблиці, щоб
+          оновити профіль та карту.
+        </p>
+      </div>
+
       <div class="control-group">
-        <label for="community-select">Оберіть громаду</label>
+        <label for="community-select">Громада</label>
         <select id="community-select">
-          <option value="">-- Оберіть громаду --</option>
+          <option value="">Оберіть громаду</option>
         </select>
       </div>
     </section>
 
-    <section class="grid-two">
-      <section class="card">
+    <main class="dashboard-grid">
+      <section class="card table-card">
         <div class="card-header">
           <h2>Рейтинг громад</h2>
-          <span class="muted">Сортування за загальним індексом</span>
+          <span class="card-meta">
+            Сортування за загальним індексом стабільності
+          </span>
         </div>
 
-        <table id="table">
-          <thead>
-            <tr>
-              <th>№</th>
-              <th>Громада</th>
-              <th>Total</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </section>
-
-      <section class="card">
-        <div class="card-header">
-          <h2>Профіль громади</h2>
-          <span class="muted">Детальна картка вибраної громади</span>
+        <div class="table-wrap">
+          <table id="table">
+            <thead>
+              <tr>
+                <th>№</th>
+                <th>Громада</th>
+                <th>Клас</th>
+                <th>Індекс</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
         </div>
-        <div id="profile" class="profile-empty">Оберіть громаду</div>
       </section>
-    </section>
 
-    <section class="card">
+      <section class="card profile-card">
+        <div class="card-header profile-header">
+          <div>
+            <h2>Профіль громади</h2>
+            <p class="card-caption">
+              Короткий профіль та інтерпретація поточного стану вибраної
+              громади
+            </p>
+          </div>
+        </div>
+
+        <div id="profile" class="profile-empty">
+          Оберіть громаду, щоб переглянути її індекси, клас стабільності та
+          короткий аналітичний висновок.
+        </div>
+
+        <section
+          id="community-analysis"
+          class="analysis-panel"
+          aria-labelledby="analysis-title"
+        >
+          <div class="analysis-panel-header">
+            <h3 id="analysis-title">Аналітичний висновок</h3>
+            <span class="card-meta">
+              Стислий коментар до поточного профілю громади
+            </span>
+          </div>
+
+          <div id="analysis-empty" class="analysis-empty">
+            Після вибору громади тут буде показано інтерпретацію результатів,
+            ключову сильну сторону, основний ризик і коротку рекомендацію.
+          </div>
+
+          <div id="analysis-content" class="analysis-grid" hidden>
+            <article class="analysis-block">
+              <div class="analysis-label">Поточний стан</div>
+              <p id="analysis-status-text" class="analysis-text"></p>
+            </article>
+
+            <article class="analysis-block">
+              <div class="analysis-label">Найсильніша сторона</div>
+              <p id="analysis-strongest" class="analysis-text"></p>
+            </article>
+
+            <article class="analysis-block">
+              <div class="analysis-label">Найслабша сторона</div>
+              <p id="analysis-weakest" class="analysis-text"></p>
+            </article>
+
+            <article class="analysis-block">
+              <div class="analysis-label">Рекомендація</div>
+              <p id="analysis-recommendation" class="analysis-text"></p>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <section class="card map-card">
       <div class="card-header">
-        <h2>Карта громад</h2>
-        <span class="muted">Підсвітка громади після вибору</span>
+        <div>
+          <h2>Карта громад</h2>
+          <p class="card-caption">
+            Вибрана громада підсвічується та автоматично потрапляє у фокус карти
+          </p>
+        </div>
       </div>
-      <div id="map"></div>
+      <div id="map" aria-label="Карта громад"></div>
     </section>
   </div>
 
