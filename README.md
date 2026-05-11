@@ -1,20 +1,55 @@
-# Territorial Stability Index — Pilot MVP
+# ISTD Demo — Інтелектуальна інформаційна система територіального розвитку
 
-This repository contains a pilot analytical MVP for assessing territorial stability of communities based on three groups of factors:
+Це публічна демонстраційна версія ISTD — пілотної інформаційно-аналітичної
+системи для геопросторового моніторингу, оцінки стабільності та підтримки
+стратегічного розвитку територіальних громад.
 
-- Spatial Stability
-- Development Capacity
-- Security and Resilience
+Демо показує базову логіку інтерфейсу, рейтинг громад, карту GIS-шарів і
+стратегічний профіль на прикладі Південної громади Харківської області.
 
-## Project structure
+## Важливе застереження
+
+Дані, індекси та стратегічні висновки мають пілотний демонстраційний характер і
+не є офіційним висновком щодо громади. Показники потребують уточнення та
+верифікації з офіційними джерелами.
+
+Стабільнісний індекс у цій версії є демонстраційним аналітичним компонентом
+ISTD.
+
+## Що входить у публічну версію
+
+- статичний dashboard;
+- підготовлені демонстраційні GeoJSON-шари для Південної громади;
+- публічний стратегічний профіль;
+- публічний набір фактичних GIS-показників.
+
+Raw GIS-дані, внутрішні processing-скрипти та технічні audit-звіти не входять до
+публічного демо.
+
+## Локальний запуск
+
+```bash
+python -m http.server 8000
+```
+
+Після запуску відкрийте:
 
 ```text
-territorial-stability-mvp/
-├── data/
-├── src/
-├── results/
-├── dashboard/
-├── README.md
-└── requirements.txt
+http://localhost:8000/dashboard/
+```
 
+## GitHub Pages
 
+Для публікації через GitHub Pages:
+
+1. Відкрийте `Settings`.
+2. Перейдіть до `Pages`.
+3. Оберіть `Deploy from branch`.
+4. Оберіть гілку `main`.
+5. Оберіть папку `/root`.
+
+Після публікації dashboard буде доступний за адресою на кшталт:
+
+```text
+https://RomanViatkin.github.io/istd-demo/dashboard/
+```

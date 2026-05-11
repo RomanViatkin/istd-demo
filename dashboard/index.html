@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Індекс стабільності територій</title>
+  <title>ISTD — Інтелектуальна інформаційна система територіального розвитку</title>
   <meta
     name="description"
-    content="Пілотна аналітична модель оцінки територіальних громад"
+    content="Публічна демонстраційна версія платформи геопросторового моніторингу, оцінки стабільності та підтримки стратегічного розвитку територіальних громад Харківської області"
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,20 +23,40 @@
 <body>
   <div class="page-shell">
     <header class="page-header">
-      <div class="page-eyebrow">Пілотна аналітична модель</div>
-      <h1>Індекс стабільності територій</h1>
+      <div class="page-eyebrow">ПУБЛІЧНА ДЕМО-ВЕРСІЯ</div>
+      <h1>ISTD — Інтелектуальна інформаційна система територіального розвитку</h1>
       <p class="page-subtitle">
-        Оцінка територіальних громад за просторовими, безпековими та
-        розвитковими показниками.
+        Публічна демонстраційна версія платформи геопросторового моніторингу,
+        оцінки стабільності та підтримки стратегічного розвитку територіальних
+        громад Харківської області.
+      </p>
+      <p class="component-note">
+        Аналітичний компонент: Індекс стабільності територій.
       </p>
     </header>
+
+    <section class="card methodology-card" aria-labelledby="methodology-title">
+      <div>
+        <h2 id="methodology-title">Методологічна основа ISTD</h2>
+        <p>
+          ISTD демонструє підхід до геопросторового моніторингу громад,
+          оцінки територіальної стійкості та формування аналітичної основи для
+          стратегічного планування.
+        </p>
+      </div>
+      <div class="status-note">
+        Ця версія є публічною демонстрацією інтерфейсу та базової логіки ISTD.
+        Дані, індекси та стратегічні висновки подані у пілотному форматі та не
+        є офіційним висновком щодо громади.
+      </div>
+    </section>
 
     <section class="card controls-card" aria-label="Панель вибору громади">
       <div class="controls-intro">
         <h2>Вибір громади</h2>
         <p>
           Оберіть громаду зі списку або натисніть на рядок у таблиці, щоб
-          оновити профіль та карту.
+          оновити профіль, аналітичний висновок, стратегічний профіль та карту.
         </p>
       </div>
 
@@ -53,7 +73,7 @@
         <div class="card-header">
           <h2>Рейтинг громад</h2>
           <span class="card-meta">
-            Сортування за загальним індексом стабільності
+            Сортування за аналітичним компонентом індексу стабільності
           </span>
         </div>
 
@@ -78,7 +98,7 @@
             <h2>Профіль громади</h2>
             <p class="card-caption">
               Короткий профіль та інтерпретація поточного стану вибраної
-              громади
+              громади.
             </p>
           </div>
         </div>
@@ -96,7 +116,7 @@
           <div class="analysis-panel-header">
             <h3 id="analysis-title">Аналітичний висновок</h3>
             <span class="card-meta">
-              Стислий коментар до поточного профілю громади
+              Стислий коментар до поточного профілю громади.
             </span>
           </div>
 
@@ -130,16 +150,46 @@
       </section>
     </main>
 
+    <section class="card strategic-card" aria-labelledby="strategic-profile-title">
+      <div class="card-header">
+        <div>
+          <h2 id="strategic-profile-title">Стратегічний профіль громади</h2>
+          <p class="card-caption">
+            Поглиблений просторово-аналітичний профіль для стратегічного
+            планування громади.
+          </p>
+        </div>
+      </div>
+      <div id="strategic-profile" class="strategic-empty">
+        Оберіть громаду, щоб переглянути стратегічний профіль.
+      </div>
+    </section>
+
     <section class="card map-card">
       <div class="card-header">
         <div>
           <h2>Карта громад</h2>
           <p class="card-caption">
-            Вибрана громада підсвічується та автоматично потрапляє у фокус карти
+            Вибрана громада підсвічується та автоматично потрапляє у фокус
+            карти. Для Південної громади доступні додаткові GIS-шари за
+            наявності оброблених GeoJSON-файлів.
           </p>
         </div>
       </div>
-      <div id="map" aria-label="Карта громад"></div>
+      <div class="map-layout">
+        <div id="map" aria-label="Карта громад"></div>
+        <aside class="layer-panel" aria-labelledby="layer-panel-title">
+          <h3 id="layer-panel-title">Шари Південної громади</h3>
+          <div id="pivdenna-layer-list" class="layer-list">
+            Оберіть Південну громаду, щоб переглянути доступні шари.
+          </div>
+        </aside>
+      </div>
+      <p id="pivdenna-map-note" class="map-note" hidden>
+        Для Південної громади показано демонстраційну GIS-візуалізацію на
+        основі підготовлених просторових шарів. Дані потребують подальшої
+        верифікації з офіційними джерелами.
+      </p>
     </section>
   </div>
 

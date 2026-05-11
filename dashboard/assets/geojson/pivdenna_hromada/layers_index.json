@@ -1,0 +1,27 @@
+{
+  "community": "Південна територіальна громада",
+  "crs": "EPSG:4326",
+  "categories": {
+    "boundaries": {
+      "label": "Межі громади",
+      "file": "boundaries.geojson",
+      "preferred_source_layer": "південна міська громада межі",
+      "draw_order": 4
+    },
+    "settlements": {
+      "label": "Населені пункти",
+      "file": "settlements.geojson",
+      "draw_order": 3
+    },
+    "transport": {
+      "label": "Транспортна мережа",
+      "file": "transport.geojson",
+      "draw_order": 2
+    },
+    "land_use": {
+      "label": "Землекористування",
+      "file": "land_use.geojson",
+      "draw_order": 1
+    }
+  }
+}

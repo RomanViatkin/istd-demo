@@ -1,0 +1,35 @@
+{
+  "community": "Південна територіальна громада",
+  "status": "public_demo_gis_facts",
+  "boundary_summary": {
+    "approx_area_km2": 56.02,
+    "verification_note": "Показник площі за GIS-контуром є демонстраційним і потребує уточнення після перевірки повноти шару меж громади та системи координат."
+  },
+  "settlements_summary": {
+    "feature_count": 5
+  },
+  "transport_summary": {
+    "approx_total_length_km": 303.76
+  },
+  "land_use_summary": {
+    "approx_area_by_category_km2": {
+      "forest": 15.23,
+      "farmland": 12.56,
+      "residential": 4.22,
+      "allotments": 2.15,
+      "industrial": 0.34,
+      "потребує уточнення": 7.73
+    }
+  },
+  "available_gis_layers": [
+    "boundaries",
+    "settlements",
+    "transport",
+    "land_use"
+  ],
+  "public_limitations": [
+    "Показники мають демонстраційний характер.",
+    "Частина просторових даних потребує уточнення з офіційними джерелами.",
+    "Окремі GIS-шари потребують додаткової технічної верифікації."
+  ]
+}
